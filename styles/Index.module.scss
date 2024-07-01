@@ -1,0 +1,31 @@
+@import "./colors";
+
+.index {
+  display: flex;
+  justify-content: space-between;
+  color: $blue;
+
+  h2 {
+    font-weight: normal;
+    color: inherit;
+  }
+
+  &Box {
+    display: flex;
+    align-items: center;
+    background-color: $grey-smooth;
+    color: $dark-smooth;
+    gap: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__span {
+    padding: 1rem;
+  }
+}

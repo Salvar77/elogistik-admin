@@ -1,0 +1,9 @@
+.delete {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &__h2 {
+    text-align: center;
+  }
+}

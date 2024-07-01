@@ -1,0 +1,35 @@
+.categories {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  &__basic {
+    margin-top: 2rem;
+  }
+
+  &__btn {
+    margin-right: 0.5rem;
+  }
+
+  &__button {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__prop {
+    display: block;
+  }
+
+  &__label {
+    margin-bottom: 0.5rem;
+  }
+
+  &__div {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__input {
+    margin-bottom: 0;
+  }
+}

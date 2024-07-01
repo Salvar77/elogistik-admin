@@ -1,0 +1,30 @@
+@import "../styles/colors";
+
+.logo {
+  &__svg {
+    display: flex;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $grey-smooth-2;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+    text-decoration: none;
+    padding: 0.5rem;
+
+    &One {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 1rem;
+    }
+  }
+
+  &__span {
+    color: $grey-smooth-2;
+  }
+}

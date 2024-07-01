@@ -1,0 +1,77 @@
+@import "../styles/colors";
+.newp {
+  color: $blue;
+  margin-bottom: 1.6rem;
+
+  &__label {
+    margin-bottom: 3rem;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    background-color: $white-smooth;
+    border: 0.1px solid $grey-smooth;
+    justify-content: center;
+    flex-direction: column;
+    color: $elegant-dark-blue;
+    box-shadow: 0.1rem 0.1rem $grey-smooth;
+    gap: 1rem;
+    width: 12rem;
+    height: 12rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-radius: 0.6rem;
+
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__photo {
+    background-color: $white-smooth;
+    padding: 0.5rem;
+    box-shadow: 0.1rem 0.1rem $grey-smooth;
+    height: 12rem;
+    border-radius: 0.4rem;
+    &Upload {
+      border-radius: 0.8rem;
+
+      // gap: 1rem;
+    }
+
+    &Spinner {
+      height: 12rem;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__propFill {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
