@@ -1,7 +1,50 @@
-.textGreen {
-  color: green;
-}
+@import "./colors";
 
-.textRed {
-  color: red;
+.ordersPage {
+  padding: 1rem;
+  background-color: $bgGray;
+  box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 1rem;
+    color: $blue;
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+    background-color: $white-smooth;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .basic {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+
+    th,
+    td {
+      border: 1px solid $grey-smooth;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: $grey-smooth-2;
+      color: $white-smooth;
+    }
+
+    tbody tr:hover {
+      background-color: $grey-smooth;
+    }
+  }
+
+  .textGreen {
+    color: green;
+  }
+
+  .textRed {
+    color: $red-main;
+  }
 }

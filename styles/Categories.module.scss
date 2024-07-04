@@ -1,35 +1,54 @@
-.categories {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+@import "./colors";
 
-  &__basic {
-    margin-top: 2rem;
+.ordersPage {
+  padding: 1rem;
+  background-color: $bgGray;
+  box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 1rem;
+    color: $blue;
   }
 
-  &__btn {
-    margin-right: 0.5rem;
+  .tableContainer {
+    overflow-x: auto;
+    background-color: $white-smooth;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  &__button {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+  .basic {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+
+    th,
+    td {
+      border: 1px solid $grey-smooth;
+      padding: 0.5rem;
+      text-align: left;
+      word-wrap: break-word;
+      max-width: 200px; // Adjust the max-width as needed
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    th {
+      background-color: $grey-smooth-2;
+      color: $white-smooth;
+    }
+
+    tbody tr:hover {
+      background-color: $grey-smooth-3;
+    }
   }
 
-  &__prop {
-    display: block;
+  .textGreen {
+    color: green;
   }
 
-  &__label {
-    margin-bottom: 0.5rem;
-  }
-
-  &__div {
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  &__input {
-    margin-bottom: 0;
+  .textRed {
+    color: $red-main;
   }
 }

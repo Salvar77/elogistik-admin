@@ -26,42 +26,52 @@ const OrdersPage = () => {
 
   return (
     <Layout>
-      <h1>Zamówienia</h1>
-      <table className="basic">
-        <thead>
-          <tr>
-            <th>Data</th>
-            <th>Zapłacone</th>
-            <th>Odbiorca</th>
-            <th>Produkty</th>
-          </tr>
-        </thead>
-        <tbody>
-          {orders.length > 0 &&
-            orders.map((order) => (
-              <tr key={order._id}>
-                <td>{formatDate(order.createdAt)}</td>
-                <td
-                  className={order.paid ? classes.textGreen : classes.textRed}
-                >
-                  {order.paid ? "TAK" : "NIE"}
-                </td>
-                <td>
-                  {order.name} {order.email} <br />
-                  {order.city} {order.postalCode} {order.country} <br />
-                  {order.streetAddress}
-                </td>
-                <td>
-                  {order.line_items.map((l) => (
-                    <>
-                      {l.price_data?.product_data.name} x{l.quantity}
-                    </>
-                  ))}
-                </td>
+      <div className={classes.ordersPage}>
+        <h1>Zamówienia</h1>
+        <div className={classes.tableContainer}>
+          <table className={classes.basic}>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Zapłacone</th>
+                <th>Odbiorca</th>
+                <th>Produkty</th>
               </tr>
-            ))}
-        </tbody>
-      </table>
+            </thead>
+            <tbody>
+              {orders.length > 0 &&
+                orders.map((order) => (
+                  <tr key={order._id}>
+                    <td>{formatDate(order.createdAt)}</td>
+                    <td
+                      className={
+                        order.paid ? classes.textGreen : classes.textRed
+                      }
+                    >
+                      {order.paid ? "TAK" : "NIE"}
+                    </td>
+                    <td>
+                      <div className={classes.overflowText}>
+                        {order.name} {order.email} <br />
+                        {order.city} {order.postalCode} {order.country} <br />
+                        {order.streetAddress}
+                      </div>
+                    </td>
+                    <td>
+                      <div className={classes.overflowText}>
+                        {order.line_items.map((l, index) => (
+                          <div key={index}>
+                            {l.price_data?.product_data.name} x{l.quantity}
+                          </div>
+                        ))}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </Layout>
   );
 };
