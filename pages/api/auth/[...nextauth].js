@@ -3,6 +3,12 @@ import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import NextAuth, { getServerSession } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
+console.log("NEXTAUTH_URL:", process.env.NEXTAUTH_URL);
+console.log("GOOGLE_ID:", process.env.GOOGLE_ID);
+console.log("GOOGLE_SECRET:", process.env.GOOGLE_SECRET);
+console.log("MONGODB_URI:", process.env.MONGODB_URI);
+console.log("NEXTAUTH_SECRET:", process.env.NEXTAUTH_SECRET);
+
 export const authOptions = {
   providers: [
     GoogleProvider({
