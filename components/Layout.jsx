@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
     return (
       <div className={styles.main}>
         <div className={styles.main__box}>
-          <button onClick={() => signIn("")} className={styles.main__btn}>
+          <button onClick={() => signIn("google")} className={styles.main__btn}>
             Zaloguj do Google
           </button>
         </div>
